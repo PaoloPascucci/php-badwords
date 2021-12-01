@@ -1,6 +1,8 @@
 <?php
 
-$Usertext="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis molestiae magnam maxime doloribus aliquam laudantium, eaque expedita, fugit maiores iure repellat, voluptatum hic consequuntur? Ipsa explicabo rerum maxime soluta perferendis."
+$Usertext="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis molestiae magnam maxime doloribus aliquam laudantium, eaque expedita, fugit maiores iure repellat, voluptatum hic consequuntur? Ipsa explicabo rerum maxime soluta perferendis.";
+var_dump($_GET);
+$text=$_GET['text'];
 
 ?>
 
@@ -16,7 +18,15 @@ $Usertext="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis 
     <p>
         <?php
         echo $Usertext;
+         ?>
+    </p>
+    <p> 
+        Lunghezza paragrafo con gli spazi contati è: 
+        <?php
+        echo strlen($Usertext);
         ?>
     </p>
+
+
 </body>
 </html>
