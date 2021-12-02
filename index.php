@@ -1,9 +1,11 @@
 <?php
 
 $Usertext="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis molestiae magnam maxime doloribus aliquam laudantium, eaque expedita, fugit maiores iure repellat, voluptatum hic consequuntur? Ipsa explicabo rerum maxime soluta perferendis.";
-var_dump($_GET);
+
 $text=$_GET['text'];
 
+$Usertextcensured  = str_replace($text,'***' ,$Usertext)
+//var_dump($Usertextcensured);
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +26,18 @@ $text=$_GET['text'];
         Lunghezza paragrafo con gli spazi contati è: 
         <?php
         echo strlen($Usertext);
-        ?>
+        ?> caratteri
+    </p>
+        <p>
+        <?php
+        echo $Usertextcensured;
+         ?>
+    </p>
+    <p> 
+        Lunghezza paragrafo è: 
+        <?php
+        echo strlen($Usertextcensured);
+        ?> caratteri
     </p>
 
 
